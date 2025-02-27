@@ -16,9 +16,23 @@
 
 对于Windows系统，可以下载64位版本，例如：`Wireshark-4.4.5-x64.exe`。
 
+对于Linux系统（包括树莓派），按照以下指令安装Wireshark： 
+
+`sudo apt-get update`
+
+`sudo apt-get install wireshark`
+
+运行wireshark时需要注意root权限： `sudo wireshark`
+
 ### 2.2 下载Forthink Sniffer插件
 
 你可以从项目的exe目录中找到`forthink_sniffer.exe`插件，将其放到Wireshark的`extcap`文件夹下。
+
+- 对于树莓派，将exe目录中`forthink_sniffer_linux_arm` 拷贝到extcap目录, 默认路径为`/usr/lib/aarch64-linux-gnu/wireshark/extcap`.
+
+- 对于x64 Linux系统，将 `forthink_sniffer_linux_x86` 拷贝到extcap目录。
+
+*注意：linux系统下，插件需要具备可执行权限。*
 
 关于extcap目录的说明：
 
@@ -73,13 +87,17 @@
 
 ## 3. 发布日志
 
+### （2025.2.27-v0.0.3)
+- **特性**:
+  - 增加了Linux系统插件支持，支持x64与树莓派。
+
 ### (2025.02.24-v0.0.2)
 - **特性**:
   - 第一版发布，当前仅仅提供了windows平台的插件支持，尚未实现详细的FiRa或CCC协议解析参数配置以及数据解析。
 
 ## 4. 联系我们
 
-官网: https://www.forthink.com.cn
-邮箱: dksupports@everhigh.com.cn
-淘宝店:  [Forthink store](https://shop224007954.taobao.com/)
-Github: https://github.com/forthink-xyz/
+- 官网: https://www.forthink.com.cn
+- 邮箱: dksupports@everhigh.com.cn
+- 淘宝:  [四相科技](https://shop224007954.taobao.com/)
+- Github: https://github.com/forthink-xyz/
